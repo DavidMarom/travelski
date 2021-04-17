@@ -1,0 +1,39 @@
+.card-grid {
+	grid-auto-rows: auto;
+	grid-auto-flow: dense;
+	width: 100%;
+	display: grid;
+	object-fit: contain;
+	grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
+	grid-row-gap: 20px;
+	grid-column-gap: 30px;
+}
+
+.card {
+	background-color: $card-bg;
+	border: 1px solid $card-border;
+	height: 200px;
+}
+
+.prof-image {
+	width: 128px;
+	height: 128px;
+	border-radius: 128px;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+	overflow: hidden;
+}
+
+.card-left {
+	width: 40%;
+}
+
+.card-right {
+	padding-top: 10px;
+	width: 60%;
+}
+
+.crud-right {
+	width: 10%;
+	margin-bottom: 10px;
+}
