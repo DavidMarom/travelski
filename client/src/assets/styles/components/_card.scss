@@ -15,6 +15,22 @@
 	height: 200px;
 }
 
+.plus-btn {
+	background-color: $card-bg;
+	// border: 1px solid $card-border;
+	height: 199px;
+}
+
+.btn-update{
+	background-color: #f8f8f8;
+}
+
+.plus-btn:hover {
+	background-color: #f8f8f8;
+	// border: 1px solid $card-border;
+	height: 199px;
+}
+
 .prof-image {
 	width: 128px;
 	height: 128px;

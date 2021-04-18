@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Card } from './cmps/Card'
-
+import { Add } from './cmps/Add'
 
 export const App = () => {
 	let size = 0;
@@ -54,29 +54,51 @@ export const App = () => {
 
 	const removePerson = (_id) => {
 		dataBase = dataBase.filter(person => person._id !== _id);
-		size= dataBase.length;
-		console.log(size);
+		size = dataBase.length;
+		// history.push("/");
+
+	}
+
+	const addPerson = (person) => {
+		console.log('app got new person', person);
+		dataBase.push(person);
+		size = dataBase.length;
+		console.log('DB:', dataBase);
+
 	}
 
 	useEffect(() => {
-		console.log('first');
+		
+
+
 	}, [size])
 
 	return (
 		<div className='outter-container'>
 			<div className='inner-container'>
+
+
+			{/* <Switch>
+				<Route exact component={Login} path={'/'} />
+			</Switch> */}
+
+
 				<div className='card-grid'>
 
 					{dataBase.map((person, idx) => <Card
 						key={idx}
 						data={person}
 						remove={removePerson}
-					/>
-					)
+
+					/>)
 					}
+
+					<Add
+						add={addPerson}
+					/>
+
 				</div>
 			</div>
-
 		</div>
 	)
 }
