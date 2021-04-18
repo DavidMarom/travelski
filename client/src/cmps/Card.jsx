@@ -5,8 +5,6 @@ export const Card = ({ data, remove }) => {
 	const [lat, setLat] = useState(null);
 	const [lng, setLng] = useState(null);
 
-	const [disp, setDisp] = useState(true);
-
 	let trash = (<i className="far fa-trash-alt"></i>);
 	let pen = (<i className="fas fa-pencil-alt"></i>)
 
@@ -17,7 +15,6 @@ export const Card = ({ data, remove }) => {
 		})
 	}, []);
 
-	if (disp) {
 		return (
 			<div className='card ca'>
 				< div className='card-body rb' >
@@ -45,7 +42,6 @@ export const Card = ({ data, remove }) => {
 						{pen}
 						<button onClick={() => {
 							remove(data._id);
-							setDisp(false);
 						}
 
 
@@ -57,5 +53,4 @@ export const Card = ({ data, remove }) => {
 			</div >
 
 		)
-	}else return null
 }

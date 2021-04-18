@@ -1,8 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux';
 import { App } from './App'
 import history from './history';
 import { Router } from 'react-router-dom';
+import { store } from './store/store';
 
 import reportWebVitals from './reportWebVitals'
 
@@ -11,7 +13,9 @@ import './assets/styles/global.scss'
 ReactDOM.render(
 	<React.StrictMode>
 		<Router history={history}>
-			<App />
+			<Provider store={store}>
+				<App />
+			</Provider>
 		</Router>
 	</React.StrictMode>,
 	document.getElementById('root')
