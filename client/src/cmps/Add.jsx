@@ -34,7 +34,6 @@ export const Add = ({ add }) => {
 
 	let updateForm = (
 		<form onSubmit={doUpdate} className="cal">
-
 			<input className="input" type="text" name="name" placeholder="Name" value={name} onChange={ev => { setName(ev.target.value); }} />
 			<input className="input" type="text" name="role" placeholder="Role" value={role} onChange={ev => { setRole(ev.target.value); }} />
 			<input className="input" type="text" name="loc" placeholder="Location" value={loc} onChange={ev => { setLoc(ev.target.value); }} />

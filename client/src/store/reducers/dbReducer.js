@@ -53,8 +53,10 @@ export function dbReducer(state = initialState, action = {}) {
 			return { dataBase: [...state.dataBase, action.newPerson] };
 
 		case 'REMOVE_PERSON':
-			console.log(action._id);
 			return { dataBase: state.dataBase.filter(per => action._id !== per._id) };
+
+		case 'UPDATE_PERSON':
+			return { dataBase: state.dataBase.map(per => (action.person._id === per._id) ? action.person : per            ) };
 
 		default:
 			return state

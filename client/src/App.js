@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { Card } from './cmps/Card'
 import { Add } from './cmps/Add'
 import { useSelector, useDispatch } from "react-redux";
-import { removePerson, addPerson } from './store/actions/dbActions';
+import { removePerson, addPerson, updatePerson } from './store/actions/dbActions';
 
 export const App = () => {
 	const dispatch = useDispatch();
@@ -10,6 +10,7 @@ export const App = () => {
 
 	const doRemove = (_id) => { dispatch(removePerson(_id)); }
 	const doAddPerson = (person) => { dispatch(addPerson(person)); }
+	const doUpdate = (person) => { dispatch(updatePerson(person)); }
 
 	return (
 		<div className='outter-container'>
@@ -20,6 +21,7 @@ export const App = () => {
 						key={idx}
 						data={person}
 						remove={doRemove}
+						update={doUpdate}
 					/>)
 					}
 

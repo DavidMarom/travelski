@@ -9,3 +9,9 @@ export function removePerson(_id) {
 		dispatch({ type: 'REMOVE_PERSON', _id });
 	};
 }
+
+export function updatePerson(person) {
+	return dispatch => {
+		dispatch({ type: 'UPDATE_PERSON', person });
+	};
+}
