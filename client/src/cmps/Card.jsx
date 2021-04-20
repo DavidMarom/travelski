@@ -5,6 +5,7 @@ export const Card = ({ data, remove, update }) => {
 	const [editMode, setEditMode] = useState(false);
 
 	const [_id, setId] = useState(data._id);
+	const [img, setImg] = useState(data.imgUrl);
 	const [name, setName] = useState(data.name);
 	const [role, setRole] = useState(data.role);
 	const [loc, setLoc] = useState(data.loc);
@@ -25,7 +26,7 @@ export const Card = ({ data, remove, update }) => {
 			{
 				_id: _id,
 				name: name,
-				imgUrl: 'https://res.cloudinary.com/dojmo7vcc/image/upload/v1617873535/travel/01_kbb40f.jpg',
+				imgUrl: img,
 				role: role,
 				loc: loc,
 				twitter: twitter,
