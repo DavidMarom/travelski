@@ -1,8 +1,8 @@
 # Travelski
 
 Deploy:
-```cd client```
-```npm i```
+ - ```cd client```
+ - ```npm i```
 
 Run:
-```npm start```
+ - ```npm start```
