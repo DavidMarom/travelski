@@ -79,12 +79,12 @@ export const Card = ({ data, remove, update }) => {
 					</div>
 					<div className='card-right cbl'>
 						<p>{data.name}</p>
-						<p>{data.loc}</p>
+						<p className="small-font">{data.loc}</p>
 						<p>{lat} :  {lng}</p>
 						<p>Twitter: {data.twitter}</p>
-						<p>{data.addr01}</p>
-						<p>{data.addr02}</p>
-						<p>{data.addr03}</p>
+						<p className="small-font">{data.addr01}</p>
+						<p className="small-font">{data.addr02}</p>
+						<p className="small-font">{data.addr03}</p>
 
 					</div>
 				</div >
